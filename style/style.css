@@ -93,3 +93,10 @@ padding:10px 15px;
         flex-direction: column;
     }
  }
+
+ /* responsive medium device */
+ @media screen and (min-width:576px) and (max-width:992px) {
+    .nav{
+        flex-direction: column;
+    }
+ }
