@@ -9,7 +9,12 @@
 body{
     font-family: 'Work Sans', sans-serif;
 }
-
+.tex-color{
+    background: linear-gradient(180deg, #F948B2 0%, #8758F1 100%);
+ background-clip: text;
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+ }
 .btn-primary{
     padding: 10px 20px;
     border: 0;
@@ -177,11 +182,7 @@ font-size: 2rem;
 font-weight: 700;
 margin-bottom: 0;
 }
-.tex-color{
-   /* color: rgb(249,72,178);
-   color: linear-gradient(90deg, rgba(249,72,178,1) 0%, rgba(135,88,241,1) 17%); */
-   color: #f948db;
-}
+
 .online-game-description{
 color: #534C64;
 font-size: 16px;
@@ -202,11 +203,67 @@ margin-bottom: 30px;
  
 }
 
+/* Play Instantly section  */
+
+.play-instantly-container{
+    margin-top: 50px;
+display: flex;
+align-items: center;
+justify-content: space-around;
+gap: 30px;
+
+}
+/* .play-instantly-container div{
+    width: 50%;
+} */
+.play-instantly-content{
+    text-align: center;
+   
+}
+.play-instantly-title{
+text-align:center;
+font-size: 2rem;
+font-weight: 700;
+line-height: 40px;
+margin-top: 0;
+margin-bottom: 10px;
+}
+.play-instantly-description{
+ color: #534C64;
+text-align:center;
+font-size: 16px;
+font-weight: 400;
+line-height: 25px; /* 166.667% */
+margin-top: 0;
+margin-bottom: 200px;
+}
+
+.play-instantly-img-content #img-resize{
+    width: 500px;
+    height: 500px;
+    margin-left: 100px;
+}
+.play-instantly-small-img{
+    width: 200px;
+    height: 250px;
+}
+.play-instantly-small-img img{
+   width: 100%;
+}
+.play-instantly-small-img{
+    position:relative;
+    left: 0;
+    bottom: 150px;
+}
 /* responsive for mobile */
  @media screen and (max-width:576px) {
-    .nav,.nav-items, .online-game-container{
+    .nav,.nav-items, .online-game-container,.play-instantly-container{
         flex-direction: column;
     }
+  .play-instantly-img-content #img-resize{
+    width: 300px;
+    height:300px;
+  }
     /* banner section */
     .banner-container{
         flex-direction:column-reverse; 
@@ -230,12 +287,30 @@ margin-bottom: 30px;
     #btn-center{
         text-align: center;
     }
+
+    /* play instantly */
+
+    .play-instantly-img-content #img-resize{
+        width: 250px;
+        height: 250px;
+        margin-left: 100px;
+    }
+    .play-instantly-small-img{
+        width: 150px;
+        height: 200px;
+    }
+    .play-instantly-small-img img{
+       width: 100%;
+    }
+    .play-instantly-description{
+        margin-bottom: 0;
+    }
  }
 
  /* responsive medium device */
 
  @media screen and (min-width:576px) and (max-width:992px) {
-    .nav, .online-game-container{
+    .nav, .online-game-container, .play-instantly-container{
         flex-direction: column;
     }
     .online-game-container .card{
@@ -269,5 +344,9 @@ margin-bottom: 30px;
     }
     #btn-center{
         text-align: center;
+    }
+    /* play instantly */
+    .play-instantly-description{
+        margin-bottom: 0;
     }
  }
