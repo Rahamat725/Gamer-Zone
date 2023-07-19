@@ -19,6 +19,13 @@ font-size: 18px;
 font-weight: 600;
 margin-top: 20px;
 }
+.para-description{
+ color: #534C64;
+font-family: Work Sans;
+font-size: 16px;
+font-weight: 500;
+
+}
 
 /* header related style */
 header{ 
@@ -107,13 +114,12 @@ main{
     align-items: center;
     gap: 30px;
     margin-top: 50px;
+    margin-bottom: 100px;
 }
 .banner-container> div{
     width: 50%;
 }
-.banner-content{
-    /* text-align: center; */
-}
+
 .banner-content #first-heading{
 color: #0B0223;
 /* font-size: 48px; */
@@ -126,7 +132,7 @@ margin-bottom: 0;
 /* font-size: 95px; */
 font-size: 3.5rem;
 font-weight: 800;
-color: rgba(175, 80, 209, 0.878);
+color: #BC51D4;
 margin-top: 0;
 margin-bottom: 20px;
 /* text-transform: uppercase; */
@@ -161,10 +167,44 @@ margin-left: 20px;
 width: 100%;
 }
 
+/* Online Games Funny Video section */
+.text-center{
+    text-align: center;
+}
+.online-game-title{
+color: #0B0223;
+font-size: 2rem;
+font-weight: 700;
+margin-bottom: 0;
+}
+.tex-color{
+   /* color: rgb(249,72,178);
+   color: linear-gradient(90deg, rgba(249,72,178,1) 0%, rgba(135,88,241,1) 17%); */
+   color: #f948db;
+}
+.online-game-description{
+color: #534C64;
+font-size: 16px;
+font-weight: 400;
+margin-top: 5px;
+margin-bottom: 30px;
+
+}
+.online-game-container{
+    display: flex;
+    gap:20px;
+    /* flex: 1; */
+}
+.card img{
+    
+    width:300px;
+    height: 350px;
+ 
+}
 
 /* responsive for mobile */
  @media screen and (max-width:576px) {
-    .nav,.nav-items{
+    .nav,.nav-items, .online-game-container{
         flex-direction: column;
     }
     /* banner section */
@@ -193,10 +233,16 @@ width: 100%;
  }
 
  /* responsive medium device */
- 
+
  @media screen and (min-width:576px) and (max-width:992px) {
-    .nav{
+    .nav, .online-game-container{
         flex-direction: column;
+    }
+    .online-game-container .card{
+        /* width: 100%; */
+        text-align: center;
+        
+        
     }
 
     /* banner section */
