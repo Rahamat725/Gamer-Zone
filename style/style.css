@@ -195,12 +195,42 @@ margin-bottom: 30px;
     display: flex;
     gap:20px;
     /* flex: 1; */
+    /* align-items: center; */
+    justify-content: center;
 }
 .card img{
     
     width:300px;
     height: 350px;
  
+}
+.play-btn i{
+    font-size: 50px;
+    color: red;
+}
+.card{
+    width:300px;
+    height: 350px;
+    position: relative;
+}
+.card .play-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:300px;
+    height: 350px;
+    border: 2px solid grey;
+    background-color:rgba(0, 0, 0, 0.285);
+    position:absolute;
+    top:0;
+    left:0;
+    border-radius: 5px;
+    /* display: none; */
+    visibility:hidden;
+    /* bottom:200px; */
+}
+.card:hover .play-btn{
+    visibility: visible;
 }
 
 /* Play Instantly section  */
@@ -441,11 +471,15 @@ margin-top: 0;
     .nav, .online-game-container, .play-instantly-container{
         flex-direction: column;
     }
-    .online-game-container .card{
+    /* .online-game-container .card{
         /* width: 100%; */
-        text-align: center;
-        
-        
+        /* text-align: center;  */
+    } */
+    .online-game-container {
+        /* text-align: center; */
+        align-items: center;
+        padding-left: 25%;
+        padding-right: 25%;
     }
 
     /* banner section */
