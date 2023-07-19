@@ -1,22 +1,31 @@
 /* common shared style */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Work+Sans:wght@800&display=swap');
+
+  @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap');
+
 
 *{
     box-sizing: border-box;
 }
 body{
-    font-family: 'Poppins', sans-serif;
     font-family: 'Work Sans', sans-serif;
 }
 
+.btn-primary{
+    padding: 10px 20px;
+    border: 0;
+    border-radius: 48px;
+background: var(--linear, linear-gradient(90deg, #FF42A5 0%, #FF42A5 100%));color: #FFF;
+font-size: 18px;
+font-weight: 600;
+margin-top: 20px;
+}
+
 /* header related style */
-header{
- 
-   
+header{ 
     background: #FFF;
 box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.05);
-padding-top: 20px;
-padding-bottom: 20px;
+padding-top: 15px;
+padding-bottom: 15px;
 }
 .nav{
     width: 80%;
@@ -52,7 +61,7 @@ color: #0B0223;
     list-style: none;
 }
 .nav-items a{
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500px;
     color: #3C354F;
     /* color: red; */
@@ -74,8 +83,7 @@ padding:10px 15px;
 #nav-social-text{
     /* color: #3C354F; */
     color:#3C354F;
-  
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 500;
 }
 #nav-social-youtube-icon a{
@@ -85,6 +93,73 @@ padding:10px 15px;
 #nav-social-tiktok-icon a{
     margin-right: 0;
 }
+/* main part style */
+main{
+    width: 80%;
+    margin: auto;
+}
+
+/* banner section style */
+
+.banner-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+.banner-container> div{
+    width: 50%;
+}
+.banner-content{
+    /* text-align: center; */
+}
+.banner-content #first-heading{
+color: #0B0223;
+/* font-size: 48px; */
+font-size: 2rem;
+font-weight: 600;
+/* text-transform: uppercase; */
+margin-bottom: 0;
+}
+.banner-content #second-heading{
+/* font-size: 95px; */
+font-size: 3.5rem;
+font-weight: 800;
+color: rgba(175, 80, 209, 0.878);
+margin-top: 0;
+margin-bottom: 20px;
+/* text-transform: uppercase; */
+}
+.banner-description{
+color: #534C64;
+font-size:1rem;
+font-weight: 500;
+margin-top: 0;
+margin-bottom: 10px;
+}
+#icon-color{
+    color: rgb(207, 38, 38);
+}
+.btn-go-rogue{
+    border: 0;
+ display: inline-flex;
+padding: 10px 20px;
+align-items: flex-start;
+gap: 10px;
+border-radius: 48px;
+background: #4EC5F7;
+
+color: #FFF;
+font-size: 16px;
+font-weight: 600;
+margin-left: 20px;
+}
+
+/* banner image */
+.banner-img img{
+width: 100%;
+}
 
 
 /* responsive for mobile */
@@ -92,11 +167,61 @@ padding:10px 15px;
     .nav,.nav-items{
         flex-direction: column;
     }
+    /* banner section */
+    .banner-container{
+        flex-direction:column-reverse; 
+    }
+    .banner-container div{
+        width: 100%;
+       margin: auto;
+        
+    }
+    .banner-content #first-heading, #second-heading{
+       text-align:center ;
+    }
+    .banner-container p{
+        margin-left: 30px;
+        font-size: 14px;
+    }
+    header{
+        background:none;
+        box-shadow: none;
+    }
+    #btn-center{
+        text-align: center;
+    }
  }
 
  /* responsive medium device */
+ 
  @media screen and (min-width:576px) and (max-width:992px) {
     .nav{
         flex-direction: column;
+    }
+
+    /* banner section */
+    .banner-container{
+        flex-direction:column-reverse; 
+    }
+    .banner-container div{
+        width: 100%;
+       margin: auto;
+        
+    }
+    .banner-content #first-heading, #second-heading{
+       text-align:center ;
+    }
+    .banner-container p{
+        /* margin-left: 30px; */
+        padding-left: 30%;
+        /* padding-right: 25%; */
+        font-size: 14px;
+    }
+    header{
+        background:none;
+        box-shadow: none;
+    }
+    #btn-center{
+        text-align: center;
     }
  }
